@@ -1,22 +1,22 @@
 module TOPCPU
 (
-		input           clk   , 
-		input           rst   
+    input           clk   , 
+    input           rst   
 );
     //IF stage
     wire    [31:0]  PC;
-    wire    [31:0]  target_address;
-    wire		[31:0] 	INST;
+    wire    [31:0]  target_address;	
+    wire    [31:0]  INST;
     wire            PCWrite;
     //IF_ID register
     wire    [63:0]  IF_ID_D;
     wire    [63:0]  IF_ID_Q;
     //ID stage
-    wire		[31:0] 	RD1;
-		wire		[31:0] 	RD2;
+    wire    [31:0]  RD1;
+    wire    [31:0]  RD2;
     wire    [31:0]  S_INST;
     wire    [7:0]   ID_control;
-    wire		[3:0] 	ALU_control;
+    wire    [3:0]   ALU_control;
     wire            hazard_c;
     wire            stall;
     wire            IF_IDWrite;
